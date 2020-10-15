@@ -3,6 +3,15 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		
+		Person lab_rat = new Person();
+		
+		lab_rat.setName("John");
+		lab_rat.setAge(23);
+		lab_rat.setGender('M');
+		
+		lab_rat.personInfo();
+		lab_rat.happyBirthday();
+		
 		/* Print hello world
 		System.out.println("Hello world!");
 		*/
