@@ -1,8 +1,16 @@
+import java.util.Date;
 
 public class HelloWorld {
 
 	public static void main(String[] args) {
 		
+		Date date = new Date();
+		
+		DebitCard card = new DebitCard("yin",3122333,date,151);	
+		
+		DebitCard gold = new DebitCard("Lobo", 31232133,date,90);
+		
+		/* class person
 		Person lab_rat = new Person();
 		
 		lab_rat.setName("John");
@@ -11,6 +19,7 @@ public class HelloWorld {
 		
 		lab_rat.personInfo();
 		lab_rat.happyBirthday();
+		*/
 		
 		/* Print hello world
 		System.out.println("Hello world!");
