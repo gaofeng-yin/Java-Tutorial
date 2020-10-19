@@ -4,11 +4,25 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		
+		John j = new John();
+		
+		j.setGender('M');
+		j.setName("Joao");
+		j.setAge(18);
+		
+		j.drinkAlcool("whisky");
+		j.drinkAlcool("Gin");
+		j.drinkAlcool("whisky");
+		j.drinkAlcool("Gin");
+		j.drinkAlcool("whisky");
+		j.drinkAlcool("cola");
+		/* credit cards
 		Date date = new Date();
 		
 		DebitCard card = new DebitCard("yin",3122333,date,151);	
 		
 		DebitCard gold = new DebitCard("Lobo", 31232133,date,90);
+		*/
 		
 		/* class person
 		Person lab_rat = new Person();
