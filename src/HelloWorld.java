@@ -4,6 +4,7 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		
+		/* implements interface
 		BluePen pen = new BluePen();
 		
 		pen.setColor("blue");
@@ -13,7 +14,7 @@ public class HelloWorld {
 		pen.write();
 		
 		pen.earse();
-		
+		*/
 		
 		/* array and sort array 
 		int[] numbers = {89,23,2,9,5,4,7,1,34};
