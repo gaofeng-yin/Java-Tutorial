@@ -4,6 +4,43 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		
+		BluePen pen = new BluePen();
+		
+		pen.setColor("blue");
+		
+		pen.printColor();
+		
+		pen.write();
+		
+		pen.earse();
+		
+		
+		/* array and sort array 
+		int[] numbers = {89,23,2,9,5,4,7,1,34};
+		
+		int temp;
+
+		for(int i = 0; i < numbers.length; i++) {
+			for(int j = i + 1; j < numbers.length; j++ ) {
+				if(numbers[i]>numbers[j]) {
+					temp = numbers[i];
+					numbers[i] = numbers[j];
+					numbers[j] = temp;
+				}
+			}
+		}
+		//loop array
+		System.out.println("First form:\n");
+		for(int d = 0; d < numbers.length; d++) {
+			System.out.println(numbers[d]);
+		}
+		//simple way to loop array
+		System.out.println("Second form:\n");
+		for(int integers: numbers) {
+			System.out.println(integers);
+		}
+		*/
+		/* Drink Game
 		John j = new John();
 		
 		j.setGender('M');
@@ -16,6 +53,7 @@ public class HelloWorld {
 		j.drinkAlcool("Gin");
 		j.drinkAlcool("whisky");
 		j.drinkAlcool("cola");
+		*/
 		/* credit cards
 		Date date = new Date();
 		
