@@ -1,8 +1,27 @@
 import java.util.Date;
+import java.util.Hashtable;
 
 public class HelloWorld {
 
 	public static void main(String[] args) {
+		
+		//Hashtable <String, Integer> numbers = new Hashtable<String, Integer>();
+		
+		Hashtable <Integer, String> numbers = new Hashtable<Integer, String>();
+		
+		//numbers.put("this", 1);
+		//numbers.put("is", 2);
+		//numbers.put("sparta", 3);
+		
+		numbers.put(1, "one");
+		numbers.put(2, "two");
+		numbers.put(3, "three");
+		
+		String pav = numbers.get(1);
+		
+		System.out.println(pav);
+		
+		
 		
 		/* implements interface
 		BluePen pen = new BluePen();
