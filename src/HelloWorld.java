@@ -1,12 +1,57 @@
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Hashtable;
 
 public class HelloWorld {
 
+	static String reverse(String string) {
+		StringBuilder str = new StringBuilder();
+		
+		for(int i = string.length()-1; i>=0; i--) {
+			str.append(string.charAt(i));
+		}
+		
+		return str.toString();
+	}
+	
+	static int uniqueIntegers(int [] nums) {
+		int i = 0;
+		
+		if(nums.length == 0) return i;
+		
+		for(int j = 1; j < nums.length; j++) {
+			if(nums[i] != nums[j]) {
+				i++;
+				nums[i] = nums[j];
+			}
+		}
+		return i + 1;
+	}
+	
 	public static void main(String[] args) {
 		
+		/* Return number of unique integers
+		int[] numbers = {1,1,1,3,4,5};
+		
+		System.out.println(uniqueIntegers(numbers));
+		*/
+		
+		/* reverse string
+		String thisIsString = "Hello world!";
+		
+		if(thisIsString.isEmpty()) {
+			System.out.println("String is empty.");
+		}else {
+			System.out.println("Original String: " + thisIsString);
+			System.out.println("Reversed String: " + reverse(thisIsString));
+		}
+		*/
+		
+		/*
+		//String as key and Integer as value
 		//Hashtable <String, Integer> numbers = new Hashtable<String, Integer>();
 		
+		//Integer as key and String as value
 		Hashtable <Integer, String> numbers = new Hashtable<Integer, String>();
 		
 		//numbers.put("this", 1);
@@ -16,12 +61,16 @@ public class HelloWorld {
 		numbers.put(1, "one");
 		numbers.put(2, "two");
 		numbers.put(3, "three");
+		numbers.computeIfAbsent(4, k -> "four");
+		numbers.computeIfAbsent(2, k -> "tttt");
+		
+		System.out.println(numbers.get(4));
+		System.out.println(numbers.get(2));
 		
 		String pav = numbers.get(1);
 		
 		System.out.println(pav);
-		
-		
+		 */
 		
 		/* implements interface
 		BluePen pen = new BluePen();
