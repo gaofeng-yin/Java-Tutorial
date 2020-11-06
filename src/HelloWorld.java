@@ -39,14 +39,32 @@ public class HelloWorld {
 		throw new IllegalArgumentException("There's no two number which sum equals target.");
 	}
 	
+	static int  searchInsert(int[] nums, int target) {
+        if(nums.length == 0) return 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == target || target < nums[i]){
+                return i;
+            }
+        }
+        return nums.length;
+    }
+	
 	public static void main(String[] args) {
 		
+		//Input: nums = [1,3,5,6], target = 5 Output: 2
+		int [] nums = {1,3,5,6};
+		
+		System.out.println("Insert at position: " + searchInsert(nums,2));
+		
+		
+		/* twoSum
 		int [] arr = {1,2,3,4,5};
 		
 		for(int e : twoSum(arr,9)) {
 			System.out.print(e + 1);
 			System.out.print(" ");
 		}
+		*/
 		
 		/* Return number of unique integers
 		int[] numbers = {1,1,1,3,4,5};
