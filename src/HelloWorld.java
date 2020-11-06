@@ -28,7 +28,25 @@ public class HelloWorld {
 		return i + 1;
 	}
 	
+	static int[] twoSum(int nums[], int target) {
+		for(int i = 0; i < nums.length; i++) {
+			for(int j = i + 1; j < nums.length; j++) {
+				if(nums[i] + nums[j] == target) {
+					return new int[] {i,j};
+				}
+			}
+		}
+		throw new IllegalArgumentException("There's no two number which sum equals target.");
+	}
+	
 	public static void main(String[] args) {
+		
+		int [] arr = {1,2,3,4,5};
+		
+		for(int e : twoSum(arr,9)) {
+			System.out.print(e + 1);
+			System.out.print(" ");
+		}
 		
 		/* Return number of unique integers
 		int[] numbers = {1,1,1,3,4,5};
