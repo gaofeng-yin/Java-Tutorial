@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Hashtable;
+import java.util.Scanner;
 
 public class HelloWorld {
 
@@ -49,14 +50,44 @@ public class HelloWorld {
         return nums.length;
     }
 	
+	static int smallest(int num1, int num2, int num3) {
+		int smallestNum = num1;
+		
+		if(smallestNum > num2) {
+			smallestNum = num2;
+		}
+		
+		if(smallestNum > num3) {
+			smallestNum = num3;
+		}
+		
+		return smallestNum;
+	}
+	
+	static double average(int num1, int num2, int num3) {
+		double number = num1 + num2 + num3;
+		return number / 3.0 ;
+	}
+	
 	public static void main(String[] args) {
 		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Input the first number: ");
+		int a = scan.nextInt();
+		System.out.print("Input the Second number: ");
+		int b = scan.nextInt();
+		System.out.print("Input the third number: ");
+		int c = scan.nextInt();
+		System.out.println("Smallest number: " + smallest(a,b,c));
+		System.out.println("Average: " + average(a,b,c));
+
+		/*
 		//Input: nums = [1,3,5,6], target = 5 Output: 2
 		int [] nums = {1,3,5,6};
 		
 		System.out.println("Insert at position: " + searchInsert(nums,2));
 		
-		
+		*/
 		/* twoSum
 		int [] arr = {1,2,3,4,5};
 		
