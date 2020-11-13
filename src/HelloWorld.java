@@ -69,8 +69,26 @@ public class HelloWorld {
 		return number / 3.0 ;
 	}
 	
+	//middle character of str. If str length is even return 2 characters, if str length is odd return 1 character.
+	static String middleChar(String str) {
+		StringBuilder string = new StringBuilder();
+		if(str.length() % 2 == 0) {
+			string.append(str.charAt((str.length() / 2) -1));
+			string.append(str.charAt(str.length() / 2));
+		} else {
+			string.append(str.charAt(str.length() / 2));
+		}
+		
+		return string.toString();
+	}
+	
 	public static void main(String[] args) {
 		
+		String a = "a5cccdsadds";
+		
+		System.out.println(middleChar(a));
+		
+		/*
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Input the first number: ");
 		int a = scan.nextInt();
@@ -80,7 +98,7 @@ public class HelloWorld {
 		int c = scan.nextInt();
 		System.out.println("Smallest number: " + smallest(a,b,c));
 		System.out.println("Average: " + average(a,b,c));
-
+		 */
 		/*
 		//Input: nums = [1,3,5,6], target = 5 Output: 2
 		int [] nums = {1,3,5,6};
