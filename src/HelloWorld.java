@@ -108,6 +108,7 @@ public class HelloWorld {
 		return vowels;
 	}
 	
+	//count number of words in string
 	static int count_word(String str) {
 		int words = 0;
 		for(int i = 0; i < str.length(); i++) {
@@ -118,11 +119,28 @@ public class HelloWorld {
 		return words;
 	}
 	
+	static int sum_of_integers(int num) {
+		int result = 0;
+		
+		while(num > 0) {
+			result += num % 10;
+			num = num / 10;
+		}
+		
+		return result;
+	}
+	
 	public static void main(String[] args) {
 		
+		int number = 4573;
+		
+		System.out.println("sum: " + sum_of_integers(number));
+		
+		/* count number of words in string
 		String phrase = "Hello world.";
 		
 		System.out.println("Number of words in string: " + count_word(phrase));
+		*/
 		
 		/*Number of vowels in string
 		String palav = "aeiouvAEIOUV";
