@@ -84,7 +84,7 @@ public class HelloWorld {
 	}
 	
 	//count number of vowels in string 
-	static int num_vowels(String str) {
+	static int count_vowels(String str) {
 		int vowels = 0;
 		
 		Stack<Character> vowel_map = new Stack<Character>();
@@ -108,12 +108,26 @@ public class HelloWorld {
 		return vowels;
 	}
 	
+	static int count_word(String str) {
+		int words = 0;
+		for(int i = 0; i < str.length(); i++) {
+			if(str.charAt(i) == ' ' || str.charAt(i) == '.') {
+				words++;
+			}
+		}
+		return words;
+	}
+	
 	public static void main(String[] args) {
+		
+		String phrase = "Hello world.";
+		
+		System.out.println("Number of words in string: " + count_word(phrase));
 		
 		/*Number of vowels in string
 		String palav = "aeiouvAEIOUV";
 		
-		System.out.println("number os vowels:" + num_vowels(palav));
+		System.out.println("number os vowels:" + count_vowels(palav));
 		*/
 		
 		/* middle character 
