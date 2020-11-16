@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class HelloWorld {
 
@@ -49,7 +50,7 @@ public class HelloWorld {
         }
         return nums.length;
     }
-	
+	//smallest number between 3 numbers 
 	static int smallest(int num1, int num2, int num3) {
 		int smallestNum = num1;
 		
@@ -63,7 +64,7 @@ public class HelloWorld {
 		
 		return smallestNum;
 	}
-	
+	//average of 3 numbers 
 	static double average(int num1, int num2, int num3) {
 		double number = num1 + num2 + num3;
 		return number / 3.0 ;
@@ -82,13 +83,45 @@ public class HelloWorld {
 		return string.toString();
 	}
 	
+	//count number of vowels in string 
+	static int num_vowels(String str) {
+		int vowels = 0;
+		
+		Stack<Character> vowel_map = new Stack<Character>();
+		
+		vowel_map.add('a');
+		vowel_map.add('e');
+		vowel_map.add('i');
+		vowel_map.add('o');
+		vowel_map.add('u');
+		vowel_map.add('A');
+		vowel_map.add('E');
+		vowel_map.add('I');
+		vowel_map.add('O');
+		vowel_map.add('U');
+		
+		for(int i = 0; i < str.length(); i++) {
+			if(vowel_map.contains(str.charAt(i))) {
+				vowels++;
+			}
+	}
+		return vowels;
+	}
+	
 	public static void main(String[] args) {
 		
+		/*Number of vowels in string
+		String palav = "aeiouvAEIOUV";
+		
+		System.out.println("number os vowels:" + num_vowels(palav));
+		*/
+		
+		/* middle character 
 		String a = "a5cccdsadds";
 		
 		System.out.println(middleChar(a));
-		
-		/*
+		*/
+		/* smallest number and average 
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Input the first number: ");
 		int a = scan.nextInt();
