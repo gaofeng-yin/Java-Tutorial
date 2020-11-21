@@ -130,11 +130,41 @@ public class HelloWorld {
 		return result;
 	}
 	
+	static int reverseOfInt(int num) {
+		int reversed = 0;
+		while(num > 0) {
+			reversed *= 10;
+			reversed += num % 10;
+			num /=10;
+		}
+		return reversed;
+	}
+	
 	public static void main(String[] args) {
 		
+		int num [] = {787, 234, 345, 232};
+		
+		System.out.print("Array of numbers: ");
+		
+		for(int number : num) {
+			System.out.print(number + " ");
+		}
+		
+		System.out.println();
+		
+		for(int number : num) {
+			if(reverseOfInt(number)==number) {
+				System.out.println(number + " is capicua number!");
+			}
+		}
+		
+		
+		
+		/* Sum of integers
 		int number = 4573;
 		
 		System.out.println("sum: " + sum_of_integers(number));
+		*/
 		
 		/* count number of words in string
 		String phrase = "Hello world.";
