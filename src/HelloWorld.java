@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Scanner;
 import java.util.Stack;
@@ -140,8 +141,31 @@ public class HelloWorld {
 		return reversed;
 	}
 	
+	static boolean isValid(String s) {
+		Stack<Character> stack = new Stack<Character>();
+		
+		for(int i = 0; i < s.length(); i++) {
+			if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '[') {
+				stack.push(s.charAt(i));
+			}else if(s.charAt(i) == ')' && stack.peek() == '(') {
+				stack.pop();
+			}else if(s.charAt(i) == '}' && stack.peek() == '{') {
+				stack.pop();
+			}else if(s.charAt(i) == ']' && stack.peek() == '[') {
+				stack.pop();
+			}
+		}
+		
+		return stack.isEmpty();
+	}
+	
 	public static void main(String[] args) {
 		
+		String paren = "{[]}";
+		
+		System.out.println(isValid(paren));
+		
+		/*capicua number
 		int num [] = {787, 234, 345, 232};
 		
 		System.out.print("Array of numbers: ");
@@ -157,8 +181,7 @@ public class HelloWorld {
 				System.out.println(number + " is capicua number!");
 			}
 		}
-		
-		
+		*/
 		
 		/* Sum of integers
 		int number = 4573;
