@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -161,11 +163,29 @@ public class HelloWorld {
 		return stack.isEmpty();
 	}
 	
+	static int singleNumber(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        
+        for(int i = 0; i < nums.length; i++) {
+        	if(!map.containsKey(nums[i])) {
+        		map.put(nums[i], i);
+        	}else {
+        		map.remove(nums[i]);
+        	}
+        }
+        return (int) map.keySet().toArray()[0];
+    }
+	
 	public static void main(String[] args) {
 		
-		String paren = "{[]})";
+		int[] num = {2,2,1,3,3};
+		
+		System.out.println(singleNumber(num));
+		/* Parentisis validity
+		String paren = "([)]";
 		
 		System.out.println(isValid(paren));
+		*/
 		
 		/*capicua number
 		int num [] = {787, 234, 345, 232};
