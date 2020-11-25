@@ -163,6 +163,26 @@ public class HelloWorld {
 		return stack.isEmpty();
 	}
 	
+	static int maxProfit(int[] prices) {
+	      int small = prices[0];
+	      int index = 0;
+	      int big ;
+	      for(int i = 1; i < prices.length; i++) {
+	    	  if(prices[i] < small) {
+	    		  small = prices[i];
+	    		  index = i;
+	    	  }
+	    }
+	      if(prices[prices.length -1] == small) return 0;
+	      big = prices[index];
+	      for(int j = index + 1; j < prices.length; j++) {
+	    	  if(prices[j] > big) {
+	    		  big = prices[j];
+	    	  }
+	      }
+	      return big - small;
+	}
+	
 	static int singleNumber(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         
@@ -178,9 +198,16 @@ public class HelloWorld {
 	
 	public static void main(String[] args) {
 		
+		int [] num = {7,6,4,3,1};
+		
+		System.out.println(maxProfit(num));
+		
+		/*unique number 
 		int[] num = {2,2,1,3,3};
 		
 		System.out.println(singleNumber(num));
+		*/
+		
 		/* Parentisis validity
 		String paren = "([)]";
 		
