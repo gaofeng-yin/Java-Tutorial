@@ -164,10 +164,13 @@ public class HelloWorld {
 	}
 	
 	static int maxProfit(int[] prices) {
-	      int small = prices[0];
-	      int index = 0;
-	      int big ;
-	      for(int i = 1; i < prices.length; i++) {
+	    
+		if(prices.length == 0) return 0;
+		
+		int small = prices[0];
+	    int index = 0;
+	    int big ;
+	    for(int i = 1; i < prices.length; i++) {
 	    	  if(prices[i] < small) {
 	    		  small = prices[i];
 	    		  index = i;
